@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      console.log(axios)
+      axios.put("http://localhost:3000/user/10/data?filter=test", {
+        param1: "some data"
+      })
+      .then((response) => {
+        document.querySelector(".respose").innerHTML = JSON.stringify(response)
+        debugger
+        console.log(response)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+    </script>
+  </head>
+  <body>
+    <div class="respose"></div>
+  </body>
+</html>
